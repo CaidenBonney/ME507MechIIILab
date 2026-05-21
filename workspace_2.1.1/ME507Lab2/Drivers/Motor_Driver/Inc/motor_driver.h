@@ -23,4 +23,4 @@ void motor_driver_enable(motor_driver_t *motor_driver);
 void motor_driver_disable(motor_driver_t *motor_driver);
 void motor_driver_set_velocity(motor_driver_t *motor_driver, int8_t velocity);
 
-#endif
+#endif /* MOTOR_DRIVER_H */

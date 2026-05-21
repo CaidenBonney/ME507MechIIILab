@@ -2,10 +2,10 @@
 
 /** Example Usage
  * motor_driver_t my_motor_driver;
- * motor_driver_init(&my_motor_driver, &htim4, &hChannel1, &hChannel2, velocity);
+ * motor_driver_init(&my_motor_driver, &htim4, Channel1, Channel2, enabled,velocity);
  */
-void motor_driver_init(motor_driver_t *motor_driver,
-                       TIM_HandleTypeDef *htim,
+void motor_driver_init(motor_driver_t* motor_driver,
+                       TIM_HandleTypeDef* htim,
                        uint32_t Channel1,
                        uint32_t Channel2,
                        bool enabled,
@@ -17,7 +17,7 @@ void motor_driver_init(motor_driver_t *motor_driver,
   motor_driver->velocity = velocity;
 }
 
-void motor_driver_enable(motor_driver_t *motor_driver) {
+void motor_driver_enable(motor_driver_t* motor_driver) {
   motor_driver->enabled = true;
   if (motor_driver->velocity > 0) {
     // Forward
@@ -30,13 +30,13 @@ void motor_driver_enable(motor_driver_t *motor_driver) {
   }
 }
 
-void motor_driver_disable(motor_driver_t *motor_driver) {
+void motor_driver_disable(motor_driver_t* motor_driver) {
   motor_driver->enabled = false;
   __HAL_TIM_SET_COMPARE((motor_driver->htim), motor_driver->Channel1, 4800); // 100% duty cycle (High)
   __HAL_TIM_SET_COMPARE((motor_driver->htim), motor_driver->Channel2, 4800); // 100% duty cycle (High)
 }
 
-void motor_driver_set_velocity(motor_driver_t *motor_driver, int8_t velocity) {
+void motor_driver_set_velocity(motor_driver_t* motor_driver, int8_t velocity) {
   if (velocity > 100) {
     velocity = 100;
   } else if (velocity < -100) {
