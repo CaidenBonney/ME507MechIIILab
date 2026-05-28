@@ -1,0 +1,53 @@
+CompileFlags:
+  Add:
+    - --target=arm-none-eabi
+    - -mcpu=cortex-m4
+    - -mthumb
+    - -mfpu=fpv4-sp-d16
+    - -mfloat-abi=hard
+    - -x
+    - c
+    - -std=gnu11
+    - -DDEBUG
+    - -DUSE_HAL_DRIVER
+    - -DSTM32F411xE
+    - -isystem/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.macosaarch64_1.0.0.202602081740/tools/lib/gcc/arm-none-eabi/14.3.1/include
+    - -isystem/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.macosaarch64_1.0.0.202602081740/tools/lib/gcc/arm-none-eabi/14.3.1/include-fixed
+    - -isystem/Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.14.3.rel1.macosaarch64_1.0.0.202602081740/tools/arm-none-eabi/include
+  Remove:
+    - --specs=*
+    - -fstack-usage
+    - -fcyclomatic-complexity
+    - -MMD
+    - -MP
+---
+If:
+  PathMatch: workspace_2\.1\.1/ME507Lab0/.*
+CompileFlags:
+  Add:
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab0/Core/Inc
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab0/Drivers/STM32F4xx_HAL_Driver/Inc
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab0/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab0/Drivers/CMSIS/Include
+---
+If:
+  PathMatch: workspace_2\.1\.1/ME507Lab1/.*
+CompileFlags:
+  Add:
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab1/Core/Inc
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab1/Drivers/STM32F4xx_HAL_Driver/Inc
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab1/Drivers/CMSIS/Include
+---
+If:
+  PathMatch: workspace_2\.1\.1/ME507Lab2/.*
+CompileFlags:
+  Add:
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab2/Core/Inc
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab2/Drivers/STM32F4xx_HAL_Driver/Inc
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab2/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab2/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab2/Drivers/CMSIS/Include
+    - -I/Users/caidenbonney/STM32CubeIDE/ME507MechIIILab/workspace_2.1.1/ME507Lab2/Drivers/Motor_Driver/Inc
